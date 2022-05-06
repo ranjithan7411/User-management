@@ -1,0 +1,60 @@
+
+
+<div id="navbar">
+    <ul>
+        <li><a (click)="changeView()" [routerLink]="['/home']">Students</a> </li>
+        <li><a (click)="changeView()" routerLink="room">Room</a></li>
+        <li><a  (click)="changeView()"[routerLink]="['/food']">Food</a> </li>          
+        <li><a (click)="changeView()" routerLink="about2">About</a></li>
+        <li><a (click)="changeView()" routerLink="contactus2">Contact Us</a></li>
+        <li><a (click)="changeView()" routerLink="photo2">Photo</a></li>
+        <li><button (click)="changeView()" routerLink="login">Logout</button></li>
+    </ul>
+</div>
+
+<div id="categories">
+    
+       
+      
+        
+   
+    <section>
+        <div id="container">
+           
+            <h1>Update room details</h1>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div id="card" formGroupName="userData">
+                    <div class="form-group">
+                        <label for="id" class="lbl">Room number: <b>: </b></label><br>
+                        <input type="text" id="number" class="form-control" name="number" formControlName="number" [(ngModel)]="rooms.roomnumber" placeholder="Enter Email">
+                        <span *ngIf="!signupForm.get('userData.number').valid && signupForm.get('userData.number').touched">
+                            Please enter a valid Room number
+                        </span> 
+                    </div>
+                    <div class="form-group">
+                        <label for="id" class="lbl">No of beds: <b>: </b></label><br>
+                        <input type="text" id="number1" class="form-control" name="number1" formControlName="number1" [(ngModel)]="rooms.no_of_Beds" placeholder="Enter Email">
+                        <span *ngIf="!signupForm.get('userData.number1').valid && signupForm.get('userData.number1').touched">
+                            Please enter a valid no of beds
+                        </span> 
+                    </div>
+                    <div class="form-group">
+                        <label for="id" class="lbl">No of students: <b>: </b></label><br>
+                        <input type="text" id="number2" class="form-control" name="number2" formControlName="number2" [(ngModel)]="rooms.no_of_Students" placeholder="Enter Email">
+                        <span *ngIf="!signupForm.get('userData.number2').valid && signupForm.get('userData.number2').touched">
+                            Please enter a valid no of students
+                        </span> 
+                    </div>
+                    
+                     <div class="button">
+                        <button type="submit" class="submit" value="submit" id="btn"   >Submit</button><br><br>
+                        <br>
+                    </div>
+                    
+                    
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    </div>

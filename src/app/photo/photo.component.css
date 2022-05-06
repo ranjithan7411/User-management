@@ -1,0 +1,70 @@
+img{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+}
+
+
+*{
+    text-align:center;
+    
+}
+#navbar{
+    display:flex;
+    color: white;
+    justify-content: space-evenly;
+    background-color: rgb(42, 117, 117);
+    margin: 0;
+}
+#navbar ul{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+#navbar ul li a{
+    text-decoration: none;
+    
+    font-weight: bolder;
+    font-size: 20px;
+    color: white
+}
+
+button{
+    
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: beige;
+}
+#body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1JiGokrCYV0nPTz7Ac3EIY3D2MEcpItAtwA&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: antiquewhite;
+    padding: 40px;
+}
+#container{
+    line-height:30px;
+}
+
+.lbl{
+    font-size:large;
+    font-weight: 10%;
+}
+#email, #phonenumber{
+    width:200px;
+    height:50px;
+    font-size: 15px;
+}
+#button{
+    width: 180px;
+    height:40px;
+    font-size: 20px;
+}
+.lines{
+    font-size: 21px;
+}

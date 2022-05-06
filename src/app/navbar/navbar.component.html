@@ -1,0 +1,19 @@
+
+<!-- <h1>Hostel management</h1> -->
+<div id="container">
+<div id="navbar">
+    
+    <ul>
+        <li><a (click)="changeView()" [routerLink]="['/home']">Students</a> </li>
+        <li><a (click)="changeView()" [routerLink]="['/room']">Room</a></li>
+        <li><a  (click)="changeView()"[routerLink]="['/food']">Food</a> </li>          
+        <li><a (click)="changeView()" [routerLink]="['/about1']">About</a></li>
+        <li><a (click)="changeView()" [routerLink]="['/contactus']">Contact Us</a></li>
+        <li><a (click)="changeView()" [routerLink]="['/photo']">Photo</a></li>
+        <li><button (click)="changeView()" [routerLink]="['/login']">Logout</button></li>
+    </ul>
+    
+ </div>  
+
+<img *ngIf="imgVisible" src="https://cdn.pixabay.com/photo/2013/09/23/04/36/hostel-185156__340.jpg" alt="">
+</div>

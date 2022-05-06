@@ -1,0 +1,16 @@
+ <body>
+    <div *ngIf="isVisible">
+<div class="container col-md-6">
+ <div class="text-center">
+                <div class="text-center">
+                    <h2>Are you an Admin or Student?</h2>
+                </div>
+                <form>
+                    <button type="submit"  (click)="changeView()" class="btn btn-primary"  [routerLink]="['/adminlogin']">Admin Login</button>
+                    <br>
+                    <button type="submit"  (click)="changeView()" class="btn btn-primary" [routerLink]="['/userlogin']">Student Login</button>
+                </form>
+               </div> 
+        </div>
+</div></body> 
+

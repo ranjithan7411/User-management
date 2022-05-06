@@ -1,0 +1,44 @@
+<body>
+    <section>
+    <div id="container">
+        <div class="card">
+        <h1>AdminLogin</h1><br>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div formGroupName="userData">
+                <div class="form-group">
+                    <label for="id" class="label">Username <b>: </b></label><br>
+                    <input type="text" id="email" class="form-control" formControlName="email" [(ngModel)]="adminlogin.email" name="email" placeholder="Enter Username/Email">
+                    <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">
+                        Please enter a valid email
+                    </span><br> <br>
+                </div>
+                
+                
+                <div class="form-group" id="pwd">
+                    <label for="id" class="label">Password <b>: </b></label><br>
+                    <input type="text" id="password" class="form-control" formControlName="password" name="password" [(ngModel)]="adminlogin.password" placeholder="Enter the password">
+                  
+                   <span *ngIf="!signupForm.get('userData.password').valid && signupForm.get('userData.password').touched">
+                    Please enter a valid password
+                </span>                   <br>
+                </div> 
+                <div class="button">
+                    <button type="submit" class="btn btn-primary" value="submit" id="btn">Submit</button><br><br>
+                    
+                    
+                </div>
+                <br><br>
+                <div class="button11">
+                    <label>Not a member? </label>
+                
+                    <button type="submit"  (click)="changeView()" class="btn btn-primary" [routerLink]="['/createadmin']"> create account</button>
+                 
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    </div>
+</section>
+
+</body> 

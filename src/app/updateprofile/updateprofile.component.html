@@ -1,0 +1,75 @@
+
+
+<div id="navbar">
+        
+    <ul>
+        <li><a  [routerLink]="['/profile']">Profile</a> </li>
+        <li><a  [routerLink]="['/food2']">Food</a> </li>          
+        <li><a  [routerLink]="['/about2']">About</a></li>
+        <li><a  [routerLink]="['/contactus2']">Contact Us</a></li>
+        <li><a  [routerLink]="['/photo2']">Photo</a></li>
+        <li><button  [routerLink]="['/login']">Logout</button></li>
+    </ul>
+    
+ </div>  
+<div id="categories">
+    <!-- <div id="button">
+        <button class="btn" [routerLink]="['/viewstudent']">View student</button>
+      
+        <button class="btn" [routerLink]="['/updatestudent']">Edit student</button>
+        <button class="btn" [routerLink]="['/deletestudent']">Delete student</button>
+    </div> -->
+    <section>
+        <div id="container">
+           
+            <h1>Update details</h1>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div id="card" formGroupName="userData">
+                    <div class="form-group">
+                        <label for="id" class="lbl">Name: <b>: </b></label><br>
+                        <input type="text" id="name" class="form-control" formControlName="name" name="name" [(ngModel)] ="students.name" placeholder="Enter Username/Email">
+                        <span *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched">
+                            Please enter a valid name
+                        </span><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="id" class="lbl">Phonenumber: <b>: </b></label><br>
+                        <input type="text" id="phonenumber" name="phonenumber" class="form-control" formControlName="phonenumber" [(ngModel)] ="students.phonenumber" placeholder="Enter your phone number">
+                        <span *ngIf="!signupForm.get('userData.phonenumber').valid && signupForm.get('userData.phonenumber').touched">
+                            Please enter a valid phonenumber
+                        </span><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="id" class="lbl">Email: <b>: </b></label><br>
+                        <input type="text" id="name" class="form-control" name="email" formControlName="name" [(ngModel)]="students.email" placeholder="Enter Email">
+                        <span *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched">
+                            Please enter a valid name
+                        </span><br> 
+                    </div>
+                    
+                    
+                    <div class="form-group" id="pwd">
+                        <label for="id" class="lbl">Password <b>: </b></label><br>
+                        <input type="text" id="password" class="form-control" name="password" formControlName="password" [(ngModel)]="students.password" placeholder="Enter the password">
+                       <!-- <a class="forgotpwd" href="" type="submit">Forgot Password?</a>-->
+                       <span *ngIf="!signupForm.get('userData.password').valid && signupForm.get('userData.name').touched">
+                        Please enter a valid password
+                    </span>                   <br>
+                    </div> 
+                    <div class="button">
+                        <button type="submit" class="submit" value="submit" id="btn"   >Submit</button><br><br>
+                        <br>
+                    </div>
+                    
+                    
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- <img *ngIf="imgVisible" src=""> -->
+    </div>
+
+   
+
+    

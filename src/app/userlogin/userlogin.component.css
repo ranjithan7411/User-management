@@ -1,0 +1,82 @@
+body{
+    background: linear-gradient(90deg,rgb(236, 224, 117) 0%, rgb(231, 218, 98) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:80vw;
+    height: 95vh;
+}
+.card {
+    margin-top: 10px;
+    border: none;
+    width:30%;
+    height: 60%;
+    padding: 40px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    -opacity: 0.6;
+    background: linear-gradient(90deg,hsla(205, 46%, 30%, 1) 0%, hsla(270, 26%, 36%, 1) 100%);
+}
+.card label h1, h6{
+    color:#fff;
+}
+.form-control{
+    width:300px;
+    height:30px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.label{
+    font-size: 18px;
+}
+
+form{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 45px;
+    line-height: 20px;
+}
+.submit{
+    width:150px;
+    height:35px;
+    margin-left: 80px;
+    margin-top: -10px;
+    font-size: 18px;
+}
+#btn{
+    width:150px;
+    height:35px;
+    margin-left: 60px;
+    margin-top: -10px;
+    font-size: 18px;
+}
+.btn:hover, .submit:hover{
+    background-color: rgb(229, 151, 231);
+  
+}
+.button11{
+    margin-top: -10px;
+}
+#pwd{
+    margin-top: -20px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.regDiv{
+    margin-left: 40px;
+    margin-bottom: 35px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: -10px;
+}
+.form-group{
+    line-height: 20px;
+}

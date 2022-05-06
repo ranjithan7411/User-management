@@ -1,0 +1,18 @@
+
+
+<div id="container">
+    <div id="navbar">
+        
+        <ul>
+            <li><a (click)="changeView()" [routerLink]="['/profile']">Profile</a> </li>
+            <li><a (click)="changeView()" [routerLink]="['/food2']">Food</a> </li>          
+            <li><a (click)="changeView()" [routerLink]="['/about2']">About</a></li>
+            <li><a (click)="changeView()" [routerLink]="['/contactus2']">Contact Us</a></li>
+            <li><a (click)="changeView()" [routerLink]="['/photo2']">Photo</a></li>
+            <li><button (click)="changeView()" [routerLink]="['/login']">Logout</button></li>
+        </ul>
+        
+     </div>  
+    
+    <img *ngIf="imgVisible" src="https://cdn.pixabay.com/photo/2013/09/23/04/36/hostel-185156__340.jpg" alt="">
+    </div>

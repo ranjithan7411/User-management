@@ -1,0 +1,44 @@
+
+
+
+<div id="navbar">
+        
+    <ul>
+        <li><a  [routerLink]="['/profile']">Profile</a> </li>
+        <li><a  [routerLink]="['/food']">Food</a> </li>          
+        <li><a  [routerLink]="['/about2']">About</a></li>
+        <li><a  [routerLink]="['/contactus2']">Contact Us</a></li>
+        <li><a  [routerLink]="['/photo2']">Photo</a></li>
+        <li><button  [routerLink]="['/login']">Logout</button></li>
+    </ul>
+    
+ </div>  
+
+    <h2>Student List <span id="button">
+    
+       
+      </span></h2>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Days</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+               
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor = "let food of foods">
+                <td>{{food.id}}</td>
+                <td>{{food.days}}</td>
+                <td>{{food.breakfast}}</td>
+                <td>{{food.lunch}}</td>
+                <td>{{food.dinner}}</td>
+               
+            </tr    >
+        </tbody>
+    </table>
+

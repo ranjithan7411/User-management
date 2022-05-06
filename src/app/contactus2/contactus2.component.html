@@ -1,0 +1,51 @@
+<body>
+    <div id="navbar">
+        
+        <ul>
+            <li><a  [routerLink]="['/viewstudent']">Profile</a> </li>
+            <li><a  [routerLink]="['/food2']">Food</a> </li>          
+            <li><a  [routerLink]="['/about2']">About</a></li>
+            <li><a  [routerLink]="['/contactus2']">Contact Us</a></li>
+            <li><a  [routerLink]="['/photo2']">Photo</a></li>
+            <li><button  [routerLink]="['/login']">Logout</button></li>
+        </ul>
+        
+     </div>  
+    <section id="body">
+    <h1>Feel free to Contact Us We're here to help</h1>
+    <p class="lines">Have an issue? Our support team is here to help you 27/7</p>
+    <p class="lines">You can also send your queries to us</p>
+    <div id="container">
+       <form ><!--[formGroup]="signupForm">  (ngSubmit)="onSubmit()" -->
+            <div formGroupName="userData" class="heading" >
+                <div class="form-group col-md-4">
+                    <label class="lbl"> Enter your Email id :  </label> <br>
+                    <input type="text" id="email" class = "form-control" formControlName = "email" placeholder="Enter your email">
+                    <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">
+                        Please enter a valid email
+                    </span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="lbl"> Enter your phone number : </label><br>
+                    <input type="text" id="phonenumber" class="form-control" formControlName="phonenumber" placeholder="Enter your phone number">
+                    <span *ngIf="!signupForm.get('userData.phonenumber').valid && signupForm.get('userData.phonenumber').touched">
+                        Please enter a valid phonenumber
+                    </span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="lbl">Enter your query: </label> <br>
+                    <textarea formControlName="message" class="form-control " id="message" cols="60" rows="10"></textarea>
+                </div>
+                <div class="button">
+                    <button class=" btn btn-primary"  id="button" (click)="onSubmit()">Submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+<h2>Also you can contact us through Phone number or by email id</h2>
+<p class="lines">Call +91 9876543210 to speak to a support representative now</p>
+<p class="lines">Send us an email to support@gmail.com</p>
+</section>
+</body>

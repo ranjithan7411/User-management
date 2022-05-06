@@ -1,0 +1,40 @@
+img{
+    width:81vw;
+    height:85vh;
+    display: block;
+} 
+#navbar{
+    display:flex;
+    color: white;
+    justify-content: space-evenly;
+    background-color: rgb(42, 117, 117);
+    margin: 0;
+}
+#button{
+    margin-left:75%;
+    
+}
+.btn-primary{
+    margin-top: 10px;
+}
+#button, h2{
+    padding-top: 20px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+    
+    font-weight: bolder;
+    font-size: 20px;
+    color: white
+}
+

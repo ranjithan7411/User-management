@@ -1,0 +1,44 @@
+
+
+
+<div id="navbar">
+        
+    <ul>
+        <li><a  [routerLink]="['/profile']">Profile</a> </li>
+        <li><a  [routerLink]="['/food2']">Food</a> </li>          
+        <li><a  [routerLink]="['/about2']">About</a></li>
+        <li><a  [routerLink]="['/contactus2']">Contact Us</a></li>
+        <li><a  [routerLink]="['/photo2']">Photo</a></li>
+        <li><button  [routerLink]="['/login']">Logout</button></li>
+    </ul>
+    
+ </div>  
+    <h2>Student List </h2>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor = "let student of students">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.password}}</td>
+                <td>{{student.phonenumber}}</td>
+                <td>
+                    <button (click)="updateStudent(student.id)" class="btn btn-info">Edit</button>
+                   
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+

@@ -1,0 +1,73 @@
+<body><section>
+    <div id="container">
+       
+        <h1>Student Registration</h1>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div id="card" formGroupName="userData">
+                <div class="form-group">
+                    <label for="id" class="lbl">Name <b>: </b></label><br>
+                    <input type="text" id="name" class="form-control" formControlName="name" name="name" [(ngModel)] ="students.name" placeholder="Enter Username/Email">
+                    <span *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched">
+                        Please enter a valid name
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="id" class="lbl">Phonenumber <b>: </b></label><br>
+                    <input type="text" id="phonenumber" name="phonenumber" class="form-control" formControlName="phonenumber" [(ngModel)] ="students.phonenumber" placeholder="Enter your phone number">
+                    <span *ngIf="!signupForm.get('userData.phonenumber').valid && signupForm.get('userData.phonenumber').touched">
+                        Please enter a valid phonenumber
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="id" class="lbl">Email <b>: </b></label><br>
+                    <input type="text" id="email" class="form-control" name="email" formControlName="email" [(ngModel)]="students.email" placeholder="Enter Email">
+                    <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">
+                        Please enter a valid email
+                    </span><br>
+                </div>
+                
+                
+                <div class="form-group" id="pwd">
+                    <label for="id" class="lbl">Password <b>: </b></label><br>
+                    <input type="text" id="password" class="form-control" name="password" formControlName="password" [(ngModel)]="students.password" placeholder="Enter the password">
+                   <span *ngIf="!signupForm.get('userData.password').valid && signupForm.get('userData.password').touched">
+                    Please enter a valid password
+                </span>                  <br>
+                </div> 
+                <div class="button">
+                    <button type="submit" class="btn btn-outline-primary" value="submit" id="btn"   >Submit</button><br><br>
+                    <br>
+                </div>
+                
+                
+            </div>
+        </form>
+    </div>
+    
+</section>
+<img *ngIf="imgVisible" src="">
+</body> 
+
+
+<!-- 
+<div class="form" *ngIf="isVisible"> 
+    <div class="card">
+    <h1>Admin Login</h1>
+    <form action=""   >
+        
+        <label for="id" class="label">Username <b>: </b></label><br>
+        <input type="tel" class = "text" name="id" id="empid" size="10"><br><br><br>
+        <label for="code" class="label">Password <b>: </b></label><br>
+        <input type="tel" name="code" class ="text" id="code" size="10" ><br>
+    
+        <input type="button" class="submit" value="submit" id="btn"  (click)="changeView()"  [routerLink]="['/navbar']" ><br><br>
+            
+            <label for="code" class="label"><b>Not an user?  </b></label>
+            <button type="submit"  (click)="changeView()" class="btn" [routerLink]="['/createadmin']">create account</button>
+        
+              
+    
+    </form>
+    </div>
+    </div> -->
+    
